@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature and Humidity Monitoring</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="dashboard-header">
+        <h1>Temperature and Humidity Dashboard</h1>
+        <p class="date" id="currentDate"></p>
+    </header>
+
+    <div class="dashboard-content">
+        <!-- Data Summary Cards -->
+        <div class="data-card">
+            <h3>Temperature Max</h3>
+            <p id="temp-max">-- °C</p>
+        </div>
+        <div class="data-card">
+            <h3>Temperature Min</h3>
+            <p id="temp-min">-- °C</p>
+        </div>
+        <div class="data-card">
+            <h3>Avg. Temperature</h3>
+            <p id="temp-avg">-- °C</p>
+        </div>
+        <div class="data-card">
+            <h3>Insan Almiqraj</h3>
+            <p>152022062</p>
+        </div>
+
+        <!-- Chart Card for Temperature -->
+        <div class="chart-card">
+            <h3>Temperature over Time</h3>
+            <canvas id="temperatureChart"></canvas>
+        </div>
+
+        <!-- Chart Card for Humidity -->
+        <div class="chart-card">
+            <h3>Humidity over Time</h3>
+            <canvas id="humidityChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Include the JavaScript file -->
+    <script src="static/js/script.js"></script>
+</body>
+</html>

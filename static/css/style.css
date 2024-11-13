@@ -1,0 +1,76 @@
+/* General Styles */
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: #f0f3f7e6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-header {
+    text-align: center;
+    padding: 20px;
+    background-color: #50bf01;
+    color: #ffffffb9;
+    box-shadow: 0 4px 8px rgba(250, 249, 249, 0.032);
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.dashboard-header .date {
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.data-card, .chart-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.data-card:hover, .chart-card:hover {
+    transform: scale(1.03);
+}
+
+.data-card h3, .chart-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ff0000;
+}
+
+.data-card p {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.chart-card {
+    grid-column: span 2;
+}
+
+canvas {
+    margin-top: 15px;
+    width: 100% !important;
+    height: 400px !important;
+}
+
+@media (max-width: 768px) {
+    .chart-card {
+        grid-column: span 1;
+    }
+}
